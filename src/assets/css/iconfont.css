@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1608124638320'); /* IE9 */
+  src: url('../iconfont/iconfont.eot?t=1608124638320#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOsAAsAAAAAB8gAAANgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqCdIJQATYCJAMQCwoABCAFhG0HVRvPBsgusG3kMyFqk4gi2CxyQwCPEA9fw+b7u3vH0qsq3THYPh7FoFsxBhyqdGcyETLCZCK7jr4/1/LfbQoEaTUgKrSHyXa7kJ1cymyJHJEte1DVZf2F/vN/zYtV297obzQdcFM1yIXAsigiSXYU7RNdBTFVcf7/XFMvxVffzuYS1VRJjaO9AY5bBxRdZBvIBH3D2JUXsZlAhxlpLHsNbZ3gozB6BeJGke3gk9IrNYmhCs2SiUU8glpN9xIFQR7878c/yBeVpJEZA/fP6l1Q9ZP8NXP5f1nJRUAwnhVsGhmrQCEuSu1HUBhahXQozT1sAFWVGKum/rPZ+iPhXuTV/MsjJJloMuK7wDoKZ36SNkXws06R+NmMk+GFGKo7ilwDn5ickgU8aGI0YGpgJEjeWBwuR7giVstrkWTtfDYVRYNX3OVPhzJPQpbnMyyb4ri0IETTa73ojYUjKxEKuZADVy4YLLeny8cR4Pd6PHnib/R2XzmzwJ1dtSOTATV0vUY6KS/ai5Y3KgU3u5WUvG1nZexWCpcjAw5TvWdsjVNjh1KyVsyOiTAo7ZO+PBykjUBd3nun13mFGBbdiyVM6PfD8JpPzRKb8ZuY4a98hz4XUk2qXl5O48HvS1RFtYsLFLfZAkMnQwMA+qwITCFBaFAaFD1HFPBtNHgBc3CP469uyhl2D8AEaM09ZPS7y7fIA8jvUuZf/cbMNy5rcNn/aizgO+T9AV0tBdrzX7hAEfwZQcucoooMQymy2OZrzmLz/gIJHaaJ/xFjwOcYyuHW8YRqOIakzTRk1SxayFVo6LQOTdUmdFjROL3TIA6J0o5lcwBCnytIenyFrM8bWsgPaBjxD5r6IkOHgwhfsNN8XPrVcmIXxIUdQ1hxMoNaJuEXJLYTuU+z86TIp3UT7la8ODsjKxttJAbhYwxx98s5QlBMOdNxA9iOaBrDJme9xCkyeoQwSzIzadmbMpxMBz+7OMJOIFwwhyGYwokxULew4Jf7fDtC1kdjx2uyKuzdCM5NqR/LliGrBdooN1plXcs1bv1kOQSBwiiO0WENoB2h0TCYWd6uF+EkZOjpETCVyDTz0bbyjPmV+hMugg7GkBIpcpRo6DlR+FlyL2HBdI1Q4TPMmJ7O+kSwnXM2kO6yM4x0B9NcAA==') format('woff2'),
+  url('../iconfont/iconfont.woff?t=1608124638320') format('woff'),
+  url('../iconfont/iconfont.ttf?t=1608124638320') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../iconfont/iconfont.svg?t=1608124638320#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .icondirection-left:before {
+  content: "\e66c";
+}
+
+.iconzoom-out:before {
+  content: "\e684";
+}
+
+.iconarrow-down-bold:before {
+  content: "\e686";
+} */
+
