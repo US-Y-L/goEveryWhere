@@ -8,9 +8,14 @@ import './assets/css/reset.css'
 import './assets/css/border.css'
 import "./utils/rem"
 import "./assets/css/iconfont.css"
+//使用awesome-swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+
 
 Vue.config.productionTip = false
 fastClick.attach(document.body) //解决移动端部分机型点击事件延迟300ms问题
+Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
 /* eslint-disable no-new */
 new Vue({
