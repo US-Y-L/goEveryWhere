@@ -21,26 +21,29 @@ export default {
     name: 'HomeReccommend',
     data(){
         return{
-            recList:[{
-                id:"0001",
-                imgUrl:"https://imgs.qunarzz.com/sight/p0/2005/30/307fa37039eab5cba3.water.jpg_200x200_39faf9c6.jpg",
-                title:"颐和园",
-                desc:"将壮观诠释到完美，将梦想展示给世界"
-            },
-            {
-                id:"0002",
-                imgUrl:"https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-                title:"故宫",
-                desc:"将壮观诠释到完美，将梦想展示给世界"
-            },
-            {
-                id:"0003",
-                imgUrl:"https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_200x200_8eb33f07.jpg",
-                title:"恭王府",
-                desc:"将壮观诠释到完美，将梦想展示给世界"
-            }
-            ]
+            // recList:[{
+            //     id:"0001",
+            //     imgUrl:"https://imgs.qunarzz.com/sight/p0/2005/30/307fa37039eab5cba3.water.jpg_200x200_39faf9c6.jpg",
+            //     title:"颐和园",
+            //     desc:"将壮观诠释到完美，将梦想展示给世界"
+            // },
+            // {
+            //     id:"0002",
+            //     imgUrl:"https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
+            //     title:"故宫",
+            //     desc:"将壮观诠释到完美，将梦想展示给世界"
+            // },
+            // {
+            //     id:"0003",
+            //     imgUrl:"https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_200x200_8eb33f07.jpg",
+            //     title:"恭王府",
+            //     desc:"将壮观诠释到完美，将梦想展示给世界"
+            // }
+            // ]
         }
+    },
+    props:{
+        recList:Array
     }
 }
 </script>

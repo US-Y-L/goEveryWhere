@@ -1,10 +1,10 @@
 <template>
     <div>
-        <home-header></home-header>
-        <home-swiper></home-swiper>
-        <home-icons></home-icons>
-        <home-reccommend></home-reccommend>
-        <home-sunday></home-sunday>
+        <home-header :city="city"></home-header>
+        <home-swiper :swiperList="swiperList"></home-swiper>
+        <home-icons :iconList="iconList"></home-icons>
+        <home-reccommend :recList="recList"></home-reccommend>
+        <home-sunday :sunList="sunList"></home-sunday>
     </div>
 </template>
 
@@ -16,9 +16,14 @@ import HomeReccommend from './components/Reccommend'
 import HomeSunday from "./components/Sunday"
 import axios from 'axios'
     export default {
+        name:"Home",
         data(){
-            return {
-                title:"Home"
+            return {  //统一向子组件传递的数据
+                city: "",
+                swiperList:[],
+                iconList:[],
+                recList:[],
+                sunList:[]
             }
         },
         components:{
@@ -32,7 +37,15 @@ import axios from 'axios'
         methods:{  //在首页去统一获取每个组件需要的数据
             async getHomeInfo(){
                 let res = await axios.get('/api/index.json');
-                console.log(res)
+                if(res.data.ret==true && res.data.data){
+                    // console.log(res.data.data)
+                    const data = res.data.data
+                    this.city = data.city
+                    this.swiperList = data.swiperList
+                    this.iconList = data.iconList
+                    this.recList = data.recList
+                    this.sunList = data.sunList
+                }
             }
         },
         mounted(){

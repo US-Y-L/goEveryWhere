@@ -1,12 +1,12 @@
 <template>
     <div class="wrapper">
-        <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper ref="mySwiper" :options="swiperOptions" v-if="showSwiper">
             <swiper-slide  v-for="item in swiperList" :key="item.id">
                 <img class="swiper-img" :src="item.imgUrl" alt="圆明园" />
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
-            <div class="swiper-button-prev" slot="button-prev"></div>
-            <div class="swiper-button-next" slot="button-next"></div>
+            <div class="swiper-button-prev" slot="button-prev" @click="prev"></div>
+            <div class="swiper-button-next" slot="button-next" @click="next"></div>
         </swiper>
     </div>
     
@@ -15,34 +15,33 @@
 <script>
 export default {
     name: "HomeSwiper",
+    props:{
+        swiperList:Array
+    },
     data(){
         return{
             swiperOptions:{
                 pagination:".swiper-pagination",
-                loop:true
-            },
-            swiperList:[{
-                id:"0001",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg"
-            },{
-                id:"0002",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg"
-            },{
-                id:"0003",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg"
-            },{
-                id:"0004",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg"
-            },{
-                id:"0005",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg"
-            },{
-                id:"0006",
-                imgUrl:"https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg"
-            },
-            
-            
-            ]
+                loop:true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            }
+        }
+    },
+    computed:{
+        showSwiper(){
+            return this.swiperList.length
+        }
+    },
+    methods:{
+        //解决swiper组件左右滑动按钮失效问题
+        prev(){
+            this.$refs.mySwiper.swiper.slidePrev();
+        },
+        next(){
+            this.$refs.mySwiper.swiper.slideNext();
         }
     }
 }
