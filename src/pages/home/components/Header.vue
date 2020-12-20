@@ -8,7 +8,7 @@
             输入城市/景点/游玩主题 
         </div>
         <div class="header-right">
-            {{city}}
+            <router-link to="/city">{{city}}</router-link>
             <span class="iconfont">&#xe686;</span>
         </div>
     </div>
@@ -26,8 +26,8 @@ export default {
 <style lang="stylus" scoped>
     @import '~assets/styles/common.styl'
     .header
-        line-height .86rem
-        width 7.5rem
+        line-height $headerHeight
+        // width 7.5rem
         display flex
         background-color $bgColor
         color #fff
@@ -51,4 +51,6 @@ export default {
             width 1.24rem
             float right
             text-align center
+            a
+                color #fff
 </style>
