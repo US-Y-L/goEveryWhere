@@ -73,7 +73,7 @@ export default {
                     const element = this.$refs[newV]  //得到的是数组
                     // console.log(element[0])
                     //而better-scroll组件需要的是一个DOM元素或DOM选择器，可以跳转到对应的DOM元素
-                    this.scroll.scrollToElement(element[0])
+                    this.scroll.scrollToElement(element[0])  //第0项才是真正的DOM元素
                 }
             }
             // immediate:true

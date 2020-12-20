@@ -45,7 +45,7 @@ export default {
                 }
                 this.timer = setTimeout(()=>{
                     //先获取第一个字母A到自己组件(不包括上面的蓝色区域)顶部的距离,第0项才是真正的DOM元素
-                    const startY = this.$refs['A'][0].offsetTop
+                    const startY = this.$refs['A'][0].offsetTop  //每次执行该方法都会重新运算，性能较低，因此需要改进
                     //获取手指移动到的位置,clientY得到的是手指距离页面最顶部的高度
                     const touchY = e.touches[0].clientY - 70  //68是city页面上面的蓝色区域的高度
                     //字母的下标值
