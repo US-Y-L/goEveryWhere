@@ -12,6 +12,9 @@ import "./assets/css/iconfont.css"
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+//进行非父子组件传值
+Vue.prototype.$bus = new Vue()
+
 
 Vue.config.productionTip = false
 fastClick.attach(document.body) //解决移动端部分机型点击事件延迟300ms问题
