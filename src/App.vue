@@ -11,6 +11,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
+    #nprogress .bar
+      background #bfa !important
     
 </style>
