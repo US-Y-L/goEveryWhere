@@ -6,6 +6,7 @@ import "nprogress/nprogress.css"
 Vue.use(Router)
 
 const router =  new Router({
+  mode:"hash",
   routes: [
     {
       path: '/',

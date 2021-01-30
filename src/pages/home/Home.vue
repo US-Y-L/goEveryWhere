@@ -1,6 +1,6 @@
 <template>
     <div>
-        <home-header :city="city"></home-header>
+        <home-header></home-header>
         <home-swiper :swiperList="swiperList"></home-swiper>
         <home-icons :iconList="iconList"></home-icons>
         <home-reccommend :recList="recList"></home-reccommend>
@@ -19,7 +19,6 @@ import axios from 'axios'
         name:"Home",
         data(){
             return {  //统一向子组件传递的数据
-                city: "",
                 swiperList:[],
                 iconList:[],
                 recList:[],
@@ -40,7 +39,7 @@ import axios from 'axios'
                 if(res.data.ret==true && res.data.data){
                     // console.log(res.data.data)
                     const data = res.data.data
-                    this.city = data.city
+                    // this.city = data.city
                     this.swiperList = data.swiperList
                     this.iconList = data.iconList
                     this.recList = data.recList

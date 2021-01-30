@@ -12,6 +12,9 @@ import "./assets/css/iconfont.css"
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+//引入vuex
+import store from "./store"
+
 //进行非父子组件传值
 Vue.prototype.$bus = new Vue()
 
@@ -24,6 +27,7 @@ Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

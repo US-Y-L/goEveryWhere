@@ -5,27 +5,15 @@
                 <div class="title border-topbot">当前城市</div>
                 <div class="btn-list">
                     <div class="btn-wrapper">
-                        <div class="btn">北京</div>
+                        <div class="btn">{{currentCity}}</div>
                     </div>
                 </div>
             </div>
             <div class="area">
                 <div class="title border-topbot">热门城市</div>
                 <div class="btn-list">
-                    <div class="btn-wrapper">
-                        <div class="btn">呼和浩特</div>
-                    </div>
-                    <div class="btn-wrapper">
-                        <div class="btn">北京</div>
-                    </div>
-                    <div class="btn-wrapper">
-                        <div class="btn">北京</div>
-                    </div>
-                    <div class="btn-wrapper">
-                        <div class="btn">北京</div>
-                    </div>
-                    <div class="btn-wrapper">
-                        <div class="btn">北京</div>
+                    <div class="btn-wrapper" v-for="(item,index) of hotCity" :key="index" @click="changeHot(item)">
+                        <div class="btn">{{item}}</div>
                     </div>
                 </div>
             </div>
@@ -34,7 +22,7 @@
                 <div class="item-list" 
                      v-for="(item,index) in item.lists" 
                      :key="index"
-                     
+                     @click="changeHot(item)"
                 >
                     <div class="item">{{item}}</div>
                 </div>
@@ -45,14 +33,16 @@
 
 <script>
 import bScroll from "better-scroll"
-export default {
+import { mapState,mapMutations } from "vuex"
+export default { 
     name:"CityList",
     props:{
         cityList:Array
     },
     data(){
         return{
-            letter:""
+            letter:"",
+            hotCity:["呼和浩特","北京","上海", "成都","南京","武汉","满洲里" ]
         }
     },
     updated(){
@@ -87,7 +77,18 @@ export default {
         })
     },
     methods:{
-        
+        changeHot(city){
+            // alert(city)
+            this.$store.commit("changeHot", city);
+            this.$router.push("/");
+            console.log(city);
+        },
+        // ...mapMutations(['changeHot'])   //加入使用这个方法会阻塞后面的行为，目前未找出解决方案
+    },
+    computed:{
+        ...mapState({
+            currentCity : 'city'
+        })
     }
 }
 </script>
