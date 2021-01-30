@@ -2,7 +2,8 @@
     <div class="rec">
         <div class="rec-title">热销推荐</div>
         <ul>
-            <li class="rec-item" v-for="item in recList" :key="item.id">
+            <router-link tag="li" :to="'/detail/' + item.id"
+                class="rec-item" v-for="item in recList" :key="item.id">
                 
                 <img class="item-img" :src="item.imgUrl" >
                 
@@ -11,7 +12,7 @@
                     <p class="item-desc">{{item.desc}}</p>
                     <button class="item-btn">查看详情</button>
                 </div>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>

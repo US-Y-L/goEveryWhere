@@ -25,6 +25,14 @@ const router =  new Router({
       }
     },
     {
+      path:"/detail/:id",
+      name:"Detail",
+      component:() => import("@/pages/detail/Detail"),
+      meta:{
+        title:"景点详情"
+      }
+    },
+    {
       path:"*",
       redirect:"/"
     }
