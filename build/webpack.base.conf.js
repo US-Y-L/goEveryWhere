@@ -27,7 +27,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'assets': resolve('src/assets')
+      'assets': resolve('src/assets'),
+      "common" : resolve('src/common'),  //放置全部页面公用的照片墙组件
     }
   },
   module: {
