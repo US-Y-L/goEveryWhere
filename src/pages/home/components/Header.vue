@@ -34,7 +34,6 @@ export default {
     @import '~assets/styles/common.styl'
     .header
         line-height $headerHeight
-        // width 7.5rem
         display flex
         background-color $bgColor
         color #fff

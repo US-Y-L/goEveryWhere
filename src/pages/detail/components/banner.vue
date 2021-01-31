@@ -2,9 +2,9 @@
     <div>
         <div class="banner">
             <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" />
-            <div class="detail-back" @click="goBack">
+            <!-- <div class="detail-back" @click="goBack">
                 <span class="iconfont">&#xe66c;</span>
-            </div>
+            </div> -->
             <div class="banner-info">
                 <p class="banner-title">大连圣亚海洋世界(AAAA景区)</p>
                 <div class="img-num" @click="showImg">
@@ -62,17 +62,6 @@ export default {
         position relative
         .banner-img
             width 100%
-        .detail-back
-            position absolute
-            left .3rem
-            top .3rem
-            width .6rem
-            height .6rem
-            border-radius 50%
-            background rgba(0,0,0,.4)
-            text-align center
-            line-height .6rem
-            color #fff
         .banner-info
             display flex
             align-items center
