@@ -46,7 +46,7 @@ export default {
         }
 
     },
-    mounted() {
+    mounted() {   //全局对象上绑定的事件可能会影响别的组件
         window.addEventListener('scroll' , this.handleScroll , false)
     },
     destoryed() {   //在组件被销毁的生命周期钩子中解绑在全局对象上的方法
@@ -69,6 +69,7 @@ export default {
         line-height .6rem
         color #fff
     .header-fixed
+        z-index 12   //设置z-index盖住上滑的内容，但是z-index值不能高于图片轮播墙
         position fixed
         left 0
         top 0
