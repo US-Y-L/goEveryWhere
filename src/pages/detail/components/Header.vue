@@ -48,6 +48,9 @@ export default {
     },
     mounted() {
         window.addEventListener('scroll' , this.handleScroll , false)
+    },
+    destoryed() {   //在组件被销毁的生命周期钩子中解绑在全局对象上的方法
+        window.removeEventListener('scroll' , this.handleScroll , false)
     }
 }
 </script>
