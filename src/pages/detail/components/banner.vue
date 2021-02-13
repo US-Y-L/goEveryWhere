@@ -13,11 +13,15 @@
                 </div>
             </div>
         </div>
-        <common-gallary v-show="isShow" :imgList="imgs" @closeGallary="closeGallary"></common-gallary>
+        <fade>
+            <common-gallary v-show="isShow" :imgList="imgs" @closeGallary="closeGallary"></common-gallary>
+        </fade>
+        
     </div>
 </template>
 
 <script>
+import Fade from "@/common/Fade"
 import CommonGallary from "common/gallary/Gallary"
 export default {
     name : "DetailBanner",
@@ -34,7 +38,8 @@ export default {
         }
     },
     components:{
-        CommonGallary
+        CommonGallary,
+        Fade
     },
     mounted() {
         console.log(this.$route.params.id)
